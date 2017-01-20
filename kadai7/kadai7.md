@@ -39,7 +39,7 @@ imagesc(ORG); axis image; % 画像の表示
 以上のコマンドによって，原画像を読み込み，濃度ヒストグラムを表示する．  
 
 ![原画像](https://github.com/M8I15/MATLAB_program/blob/master/kadai7/7.jpg)  
-図 原画像
+図0 原画像
 
 ![原画像](https://github.com/M8I15/MATLAB_program/blob/master/kadai7/kadai7-0.png)  
 図1 白黒濃淡画像  
@@ -54,4 +54,6 @@ imagesc(ORG); axis image; % 画像の表示
 図4
 
 ## 考察  
+ ORG = uint8(ORG);について考察する．  
+ 
  
