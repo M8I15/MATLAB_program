@@ -1,11 +1,33 @@
 ﻿# 課題7 レポート
-
+ 
+ ## 課題  
+ ダイナミックレンジの拡大  
+ 画素のダイナミックレンジを０から２５５にせよ.  
+ 下記はサンプルプログラムである.  
+ 課題作成にあたっては「Lenna」以外の画像を用いよ.  
+ 
+ 
 標準画像「7.jpg」を原画像とする．この画像は縦512画像，横512画素による正方形のディジタルカラー画像である．
 
-ORG=imread('7.png'); % 原画像の入力  
-imagesc(ORG); axis image; % 画像の表示
+ ### プラグラム  
+ ORG = imread('7.jpg'); % 画像の読み込み  
+ORG = rgb2gray(ORG); % 白黒濃淡画像に変換  
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示  
+pause;  
+imhist(ORG); % 濃度ヒストグラムを生成、表示  
+pause;  
+ORG = double(ORG);  
+mn = min(ORG(:)); % 濃度値の最小値を算出  
+mx = max(ORG(:)); % 濃度値の最大値を算出  
+ORG = (ORG-mn)/(mx-mn)*255;  
+imagesc(ORG); colormap(gray); colorbar; % 画像の表示  
+pause;  
+ORG = uint8(ORG); % この行について考察せよ  
+imhist(ORG); % 濃度ヒストグラムを生成、表示  
+ORG=imread('7.png'); % 原画像の入力    
+imagesc(ORG); axis image; % 画像の表示  
 
-によって，原画像を読み込み，表示した結果を図１に示す．
+によって，原画像を読み込み，表示した結果を図１に示す．  
 
 ![原画像](https://github.com/M8I15/MATLAB_program/blob/master/kadai7/7.jpg)  
 図1 原画像
