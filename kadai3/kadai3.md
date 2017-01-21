@@ -37,7 +37,7 @@ IMG = ORG > 192;
 imagesc(IMG); colormap(gray); colorbar;  
 **図5に示す**  
 
-![原画像](https://github.com/M8I15/MATLAB_program/blob/master/kadai3/3.jpg)  
+![原画像](https://github.com/M8I15/MATLAB_program/blob/master/kadai3/3-1.jpg)  
 図0 原画像  
 
 ![原画像](https://github.com/M8I15/MATLAB_program/blob/master/kadai3/kadai3-0.png)  
